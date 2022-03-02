@@ -1,0 +1,56 @@
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Manisha/Manisha-Repo/.git/
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ touch mani.py
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ gedit mani.py
+bash: gedit: command not found
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git add mani.py
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git add .
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git commit -m "first commit"
+[master (root-commit) a38fca1] first commit
+ 2 files changed, 6 insertions(+)
+ create mode 100644 mani.py
+ create mode 100644 swap.py
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git add .
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   add.py
+
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git config --global user.name "manisha'
+> "
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git config --global user.email "fegademanisha@gmail.com"
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git config user.name "manisha"
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$ git config user.email "fegademanisha@gmail.com"
+
+Manisha@Manshree MINGW64 ~/Manisha-Repo (master)
+$

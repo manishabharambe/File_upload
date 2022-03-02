@@ -1,0 +1,303 @@
+Manisha@Manshree MINGW64 ~ (master)
+$ mkdir git-dvcs
+
+Manisha@Manshree MINGW64 ~ (master)
+$ cd git-dvcs
+
+Manisha@Manshree MINGW64 ~/git-dvcs (master)
+$ git config -global
+error: did you mean `--global` (with two dashes)?
+
+Manisha@Manshree MINGW64 ~/git-dvcs (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+Manisha@Manshree MINGW64 ~/git-dvcs (master)
+$ git config --global --list
+user.name=manisha
+user.email=fegademanisha@gmail.com
+
+Manisha@Manshree MINGW64 ~/git-dvcs (master)
+$ cat ~/.gitconfig
+[user]
+        name = manisha
+        email = fegademanisha@gmail.com
+
+Manisha@Manshree MINGW64 ~/git-dvcs (master)
+$ mkdir git-demo-project
+
+Manisha@Manshree MINGW64 ~/git-dvcs (master)
+$ cd git-demo-project/
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git init
+Initialized empty Git repository in C:/Users/Manisha/git-dvcs/git-demo-project/.git/
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ ls -a
+./  ../  .git/
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ ls -al
+total 4
+drwxr-xr-x 1 Manisha 197121 0 Jul 17 21:42 ./
+drwxr-xr-x 1 Manisha 197121 0 Jul 17 21:41 ../
+drwxr-xr-x 1 Manisha 197121 0 Jul 17 21:42 .git/
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ rm -rf .git/
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ ls -al
+total 0
+drwxr-xr-x 1 Manisha 197121 0 Jul 17 21:44 ./
+drwxr-xr-x 1 Manisha 197121 0 Jul 17 21:41 ../
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git init
+Initialized empty Git repository in C:/Users/Manisha/git-dvcs/git-demo-project/.git/
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git add .
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git commit -m "First Commit"
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git commit -m "First Commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git add .
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git commit -am "express Commit"
+[master (root-commit) 53ae813] express Commit
+ 1 file changed, 30 insertions(+)
+ create mode 100644 index.html.txt
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ nano index.html
+Error in /etc/nanorc on line 237: Error expanding /usr/share/nano/*.nanorc: No such file or directory
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    index.html.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    index.html.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git commit -am "express Commit"
+[master 08ff0d3] express Commit
+ 1 file changed, 30 deletions(-)
+ delete mode 100644 index.html.txt
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ nano index.html
+Error in /etc/nanorc on line 237: Error expanding /usr/share/nano/*.nanorc: No such file or directory
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ touch teststatus
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git checkout -- teststatus
+error: pathspec 'teststatus' did not match any file(s) known to git
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git checkout -- index.html
+error: pathspec 'index.html' did not match any file(s) known to git
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        teststatus
+
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git add teststatus
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+        new file:   teststatus
+
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git commit -am "Express commit"
+[master 5fb989d] Express commit
+ 2 files changed, 29 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 teststatus
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git log
+commit 5fb989d5d9154be789af16c77c9a48e287e89c85 (HEAD -> master)
+Author: manisha <fegademanisha@gmail.com>
+Date:   Sat Jul 17 22:16:47 2021 +0530
+
+    Express commit
+
+commit 08ff0d3882b896526a3b0d89d3dca58d0ee07daa
+Author: manisha <fegademanisha@gmail.com>
+Date:   Sat Jul 17 22:11:52 2021 +0530
+
+    express Commit
+
+commit 53ae8136ef49d32c6bbc787ce8bd3fb135ba5f40
+Author: manisha <fegademanisha@gmail.com>
+Date:   Sat Jul 17 22:02:03 2021 +0530
+
+    express Commit
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git log --oneline
+5fb989d (HEAD -> master) Express commit
+08ff0d3 express Commit
+53ae813 express Commit
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git log --oneline teststatus
+5fb989d (HEAD -> master) Express commit
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git log --oneline
+5fb989d (HEAD -> master) Express commit
+08ff0d3 express Commit
+53ae813 express Commit
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git log --oneline 08ff0d3 5fb989d
+5fb989d (HEAD -> master) Express commit
+08ff0d3 express Commit
+53ae813 express Commit
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$ git log --oneline -n 2
+5fb989d (HEAD -> master) Express commit
+08ff0d3 express Commit
+
+Manisha@Manshree MINGW64 ~/git-dvcs/git-demo-project (master)
+$
